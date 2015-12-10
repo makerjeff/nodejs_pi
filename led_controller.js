@@ -6,7 +6,7 @@ var led = new GPIO(4, 'out');
 
 var ledState = process.argv[2];
 
-var currentState = led.readSync();
+var currentState = led.readSync();  //TODO: make this detection work.
 console.log(colors.green('current state: ' + Number(currentState)));
 
 ledControl(ledState, led);
